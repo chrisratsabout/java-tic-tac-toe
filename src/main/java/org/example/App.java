@@ -24,116 +24,83 @@ public class App {
             System.out.println("Draw!");
             System.exit(0);
         } else {
-            System.out.println("Player 1 (X), please make a selection:");
+            System.out.println("\u001B[34mPlayer 1 (X), please make a selection:");
             Scanner scanner = new Scanner(System.in);
             int option = Integer.parseInt(scanner.nextLine());
 
-            //TOP ROW
-            if (option == 1) {
-                if (topRow.get(0).equals("X") || topRow.get(0).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-                    topRow.set(0, "X");
-                    checkForWinAfterXSelection();
-                }
-            }
+            switch(option) {
+                case 1:
+                    if (topRow.get(0).equals("X") || topRow.get(0).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
+                        topRow.set(0, "X");
+                        checkForWinAfterXSelection();
+                    }
 
-            if (option == 2) {
-                if (topRow.get(1).equals("X") || topRow.get(1).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-                    topRow.set(1, "X");
-                    checkForWinAfterXSelection();
-                }
-            }
+                case 2:
+                    if (topRow.get(1).equals("X") || topRow.get(1).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
+                        topRow.set(1, "X");
+                        checkForWinAfterXSelection();
+                    }
+                case 3:
+                    if (topRow.get(2).equals("X") || topRow.get(2).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
+                        topRow.set(2, "X");
+                        checkForWinAfterXSelection();
+                    }
+                case 4:
+                    if (middleRow.get(0).equals("X") || middleRow.get(0).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
 
-            if (option == 3) {
-                if (topRow.get(2).equals("X") || topRow.get(2).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-                    topRow.set(2, "X");
-                    checkForWinAfterXSelection();
-                }
-            }
-
-            //MIDDLE ROW
-
-            if (option == 4) {
-                if (middleRow.get(0).equals("X") || middleRow.get(0).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-
-                    middleRow.set(0, "X");
-                    checkForWinAfterXSelection();
-                }
-            }
-
-            if (option == 5) {
-                if (middleRow.get(1).equals("X") || middleRow.get(1).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-                    middleRow.set(1, "X");
-                    checkForWinAfterXSelection();
-                }
-            }
-
-            if (option == 6) {
-                if (middleRow.get(2).equals("X") || middleRow.get(2).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-                    middleRow.set(2, "X");
-                    checkForWinAfterXSelection();
-                }
-            }
-
-            //BOTTOM ROW
-            if (option == 7) {
-                if (bottomRow.get(0).equals("X") || bottomRow.get(0).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-                    bottomRow.set(0, "X");
-                    checkForWinAfterXSelection();
-                }
-            }
-
-            if (option == 8) {
-                if (bottomRow.get(1).equals("X") || bottomRow.get(1).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-                    bottomRow.set(1, "X");
-                    checkForWinAfterXSelection();
-                }
-            }
-
-            if (option == 9) {
-                if (bottomRow.get(2).equals("X") || bottomRow.get(2).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptXLocation();
-                } else {
-                    bottomRow.set(2, "X");
-                    checkForWinAfterXSelection();
-                }
+                        middleRow.set(0, "X");
+                        checkForWinAfterXSelection();
+                    }
+                case 5:
+                    if (middleRow.get(1).equals("X") || middleRow.get(1).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
+                        middleRow.set(1, "X");
+                        checkForWinAfterXSelection();
+                    }
+                case 6:
+                    if (middleRow.get(2).equals("X") || middleRow.get(2).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
+                        middleRow.set(2, "X");
+                        checkForWinAfterXSelection();
+                    }
+                case 7:
+                    if (bottomRow.get(0).equals("X") || bottomRow.get(0).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
+                        bottomRow.set(0, "X");
+                        checkForWinAfterXSelection();
+                    }
+                case 8:
+                    if (bottomRow.get(1).equals("X") || bottomRow.get(1).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
+                        bottomRow.set(1, "X");
+                        checkForWinAfterXSelection();
+                    }
+                case 9:
+                    if (bottomRow.get(2).equals("X") || bottomRow.get(2).equals("O")) {
+                        displayPickADifferentLocationMessageForX();
+                    } else {
+                        bottomRow.set(2, "X");
+                        checkForWinAfterXSelection();
+                    }
             }
 
             if(option < 1 || option > 9){
                 System.out.println("Try again.");
                 promptXLocation();
             }
-
-
         }
-
-
-
-
     }
 
     private void promptOLocation() {
@@ -143,102 +110,75 @@ public class App {
             System.out.println("Draw!");
             System.exit(0);
         } else {
-            System.out.println("Player 2 (O), please make a selection:");
+            System.out.println("\u001B[32mPlayer 2 (O), please make a selection:");
             Scanner scanner = new Scanner(System.in);
             int option = Integer.parseInt(scanner.nextLine());
 
             //TOP ROW
-            if (option == 1) {
-                if (topRow.get(0).equals("X") || topRow.get(0).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    topRow.set(0, "O");
-                    checkForWinAfterOSelection();
-                }
-            }
-
-            if (option == 2) {
-                if (topRow.get(1).equals("X") || topRow.get(1).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    topRow.set(1, "O");
-                    checkForWinAfterOSelection();
-                }
-            }
-
-            if (option == 3) {
-                if (topRow.get(2).equals("X") || topRow.get(2).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    topRow.set(2, "O");
-                    checkForWinAfterOSelection();
-                }
-            }
-
-            //MIDDLE ROW
-
-            if (option == 4) {
-                if (middleRow.get(0).equals("X") || middleRow.get(0).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    middleRow.set(0, "O");
-                    checkForWinAfterOSelection();
-                }
-            }
-
-            if (option == 5) {
-                if (middleRow.get(1).equals("X") || middleRow.get(1).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    middleRow.set(1, "O");
-                    checkForWinAfterOSelection();
-                }
-            }
-
-            if (option == 6) {
-                if (middleRow.get(2).equals("X") || middleRow.get(2).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    middleRow.set(2, "O");
-                    checkForWinAfterOSelection();
-                }
-            }
-
-            //BOTTOM ROW
-            if (option == 7) {
-                if (bottomRow.get(0).equals("X") || bottomRow.get(0).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    bottomRow.set(0, "O");
-                    checkForWinAfterOSelection();
-                }
-            }
-
-            if (option == 8) {
-                if (bottomRow.get(1).equals("X") || bottomRow.get(1).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    bottomRow.set(1, "O");
-                    checkForWinAfterOSelection();
-                }
-            }
-
-            if (option == 9) {
-                if (bottomRow.get(2).equals("X") || bottomRow.get(2).equals("O")) {
-                    System.out.println("Pick a different location.");
-                    promptOLocation();
-                } else {
-                    bottomRow.set(2, "O");
-                    checkForWinAfterOSelection();
-                }
+            switch (option){
+                case 1:
+                    if (topRow.get(0).equals("X") || topRow.get(0).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        topRow.set(0, "O");
+                        checkForWinAfterOSelection();
+                    }
+                case 2:
+                    if (topRow.get(1).equals("X") || topRow.get(1).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        topRow.set(1, "O");
+                        checkForWinAfterOSelection();
+                    }
+                case 3:
+                    if (topRow.get(2).equals("X") || topRow.get(2).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        topRow.set(2, "O");
+                        checkForWinAfterOSelection();
+                    }
+                case 4:
+                    if (middleRow.get(0).equals("X") || middleRow.get(0).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        middleRow.set(0, "O");
+                        checkForWinAfterOSelection();
+                    }
+                case 5:
+                    if (middleRow.get(1).equals("X") || middleRow.get(1).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        middleRow.set(1, "O");
+                        checkForWinAfterOSelection();
+                    }
+                case 6:
+                    if (middleRow.get(2).equals("X") || middleRow.get(2).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        middleRow.set(2, "O");
+                        checkForWinAfterOSelection();
+                    }
+                case 7:
+                    if (bottomRow.get(0).equals("X") || bottomRow.get(0).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        bottomRow.set(0, "O");
+                        checkForWinAfterOSelection();
+                    }
+                case 8:
+                    if (bottomRow.get(1).equals("X") || bottomRow.get(1).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        bottomRow.set(1, "O");
+                        checkForWinAfterOSelection();
+                    }
+                case 9:
+                    if (bottomRow.get(2).equals("X") || bottomRow.get(2).equals("O")) {
+                        displayPickADifferentLocationMessageForO();
+                    } else {
+                        bottomRow.set(2, "O");
+                        checkForWinAfterOSelection();
+                    }
             }
 
             if(option < 1 || option > 9){
@@ -246,63 +186,46 @@ public class App {
                 promptOLocation();
             }
         }
-
     }
 
     private void checkForWinAfterXSelection(){
 
         //X WIN HORIZONTAL
         if(topRow.get(0).equals("X") && topRow.get(1).equals("X") && topRow.get(2).equals("X")){
-            displayBoard();
-            System.out.println("X Wins!");
-            System.exit(0);
+            displayXWinsMessage();
         }
 
         if(middleRow.get(0).equals("X") && middleRow.get(1).equals("X") && middleRow.get(2).equals("X")){
-            displayBoard();
-            System.out.println("X Wins!");
-            System.exit(0);
+            displayXWinsMessage();
         }
 
         if(bottomRow.get(0).equals("X") && bottomRow.get(1).equals("X") && bottomRow.get(2).equals("X")){
-            displayBoard();
-            System.out.println("X Wins!");
-            System.exit(0);
+            displayXWinsMessage();
         }
 
         //X WIN DIAGONAL
         if(topRow.get(0).equals("X") && middleRow.get(1).equals("X") && bottomRow.get(2).equals("X")){
-            displayBoard();
-            System.out.println("X Wins!");
-            System.exit(0);
+            displayXWinsMessage();
         }
 
 
         if(topRow.get(2).equals("X") && middleRow.get(1).equals("X") && bottomRow.get(0).equals("X")){
-            displayBoard();
-            System.out.println("X Wins!");
-            System.exit(0);
+            displayXWinsMessage();
         }
 
         //X WIN VERTICAL
         if(topRow.get(0).equals("X") && middleRow.get(0).equals("X") && bottomRow.get(0).equals("X")){
-            displayBoard();
-            System.out.println("X Wins!");
-            System.exit(0);
+            displayXWinsMessage();
         }
 
 
         if(topRow.get(1).equals("X") && middleRow.get(1).equals("X") && bottomRow.get(1).equals("X")){
-            displayBoard();
-            System.out.println("X Wins!");
-            System.exit(0);
+            displayXWinsMessage();
         }
 
 
         if(topRow.get(2).equals("X") && middleRow.get(2).equals("X") && bottomRow.get(2).equals("X")){
-            displayBoard();
-            System.out.println("X Wins!");
-            System.exit(0);
+            displayXWinsMessage();
         }
         displayBoard();
         promptOLocation();
@@ -311,57 +234,41 @@ public class App {
     private void checkForWinAfterOSelection(){
         //O WIN HORIZONTAL
         if(topRow.get(0).equals("O") && topRow.get(1).equals("O") && topRow.get(2).equals("O")){
-            displayBoard();
-            System.out.println("O Wins!");
-            System.exit(0);
+            displayOWinsMessage();
         }
 
         if(middleRow.get(0).equals("O") && middleRow.get(1).equals("O") && middleRow.get(2).equals("O")){
-            displayBoard();
-            System.out.println("O Wins!");
-            System.exit(0);
+            displayOWinsMessage();
         }
 
         if(bottomRow.get(0).equals("O") && bottomRow.get(1).equals("O") && bottomRow.get(2).equals("O")){
-            displayBoard();
-            System.out.println("O Wins!");
-            System.exit(0);
+            displayOWinsMessage();
         }
 
         //O WIN DIAGONAL
         if(topRow.get(0).equals("O") && middleRow.get(1).equals("O") && bottomRow.get(2).equals("O")){
-            displayBoard();
-            System.out.println("O Wins!");
-            System.exit(0);
+            displayOWinsMessage();
         }
 
 
         if(topRow.get(2).equals("O") && middleRow.get(1).equals("O") && bottomRow.get(0).equals("O")){
-            displayBoard();
-            System.out.println("O Wins!");
-            System.exit(0);
+            displayOWinsMessage();
         }
 
         //O WIN VERTICAL
 
         if(topRow.get(0).equals("O") && middleRow.get(0).equals("O") && bottomRow.get(0).equals("O")){
-            displayBoard();
-            System.out.println("O Wins!");
-            System.exit(0);
+            displayOWinsMessage();
         }
 
 
         if(topRow.get(1).equals("O") && middleRow.get(1).equals("O") && bottomRow.get(1).equals("O")){
-            displayBoard();
-            System.out.println("O Wins!");
-            System.exit(0);
+            displayOWinsMessage();
         }
 
 
         if(topRow.get(2).equals("O") && middleRow.get(2).equals("O") && bottomRow.get(2).equals("O")){
-            displayBoard();
-            System.out.println("O Wins!");
-            System.exit(0);
+            displayOWinsMessage();
         }
         displayBoard();
         promptXLocation();
@@ -397,5 +304,27 @@ public class App {
 
     private void displayBottomRow() {
         System.out.println(bottomRow.get(0) + " | " + bottomRow.get(1) + " | " + bottomRow.get(2));
+    }
+
+    private void displayPickADifferentLocationMessageForX(){
+        System.out.println("Pick a different location.");
+        promptXLocation();
+    }
+
+    private void displayPickADifferentLocationMessageForO(){
+        System.out.println("Pick a different location.");
+        promptOLocation();
+    }
+
+    private void displayXWinsMessage(){
+        displayBoard();
+        System.out.println("X Wins!");
+        System.exit(0);
+    }
+
+    private void displayOWinsMessage(){
+        displayBoard();
+        System.out.println("O Wins!");
+        System.exit(0);
     }
 }
